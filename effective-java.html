@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Effective Java - Full Book Content | Educational CS Platform</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Desktop Logo" class="desktop-logo">
+            <img src="images/onlylogo.png" alt="Mobile Logo" class="mobile-logo">
+        </div>
+        <h1>Effective Java | Educational CS Platform</h1>
+    </header>
+
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="form.html">Register</a></li>
+        </ul>
+    </nav>
+
+      <!-- Προσθήκη του Aside -->
+      <aside>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="form.html">Register</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <a href="java-programming.html"  class="go-back">Go Back</a>
+        <section>
+            <h2>Book Information</h2>
+            <img src="images/efectivejava.jfif" alt="Effective Java Book" width="150" height="200">
+            <h3>Effective Java</h3>
+            <p><strong>Author:</strong> Joshua Bloch</p>
+            <p><strong>Year:</strong> 2017 (3rd Edition)</p>
+            <p><strong>Pages:</strong> 412</p>
+            <p><strong>Rating:</strong> 4.9/5 (5,000 reviews)</p>
+            <p><strong>Summary:</strong>
+
+                Since this Jolt-award winning classic was last updated in 2008, the Java programming environment has changed dramatically. Java 7 and Java 8 introduced new features and functions including, forEach() method in Iterable interface, default and static methods in Interfaces, Functional Interfaces and Lambda Expressions, Java Stream API for Bulk Data Operations on Collections, Java Time API, Collection API improvements, Concurrency API improvements, and Java IO improvements.
+                
+                In this new edition of Effective Java, Bloch explores new design patterns and language idioms that have been introduced since the second edition was released in 2008 shortly after Java SE6, including Lambda, streams, generics and collections, as well as selected Java 9 features.
+                
+                As in previous editions, each chapter consists of several “items” presented in the form of a short, standalone essay that provides specific advice, insight into Java platform subtleties, and updated code examples. The comprehensive descriptions and explanations for each item illuminate what to do, what not to do, and why.
+                
+                    Updated techniques and best practices on classic topics, including objects, classes, libraries, methods, and serialization
+                    How to avoid the traps and pitfalls of commonly misunderstood subtleties of the language
+                    Focus on the language and its most fundamental libraries: java.lang, java.util, and, to a lesser extent, java.util.concurrent and java.io 
+                
+                </p>
+        </section>
+
+        <section id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#chapter1">Chapter 1: Introduction</a></li>
+                <li><a href="#chapter2">Chapter 2: Creating and Destroying Objects</a></li>
+                <li><a href="#chapter3">Chapter 3: Methods Common to All Objects</a></li>
+                <li><a href="#chapter4">Chapter 4: Classes and Interfaces</a></li>
+                <li><a href="#chapter5">Chapter 5: Generics</a></li>
+                <li><a href="#chapter6">Chapter 6: Enums and Annotations</a></li>
+                <li><a href="#chapter7">Chapter 7: Methods</a></li>
+                <li><a href="#chapter8">Chapter 8: General Programming</a></li>
+                <li><a href="#chapter9">Chapter 9: Exceptions</a></li>
+                <li><a href="#chapter10">Chapter 10: Concurrency</a></li>
+                <li><a href="#chapter11">Chapter 11: Serialization</a></li>
+            </ul>
+        </section>
+
+        <section id="chapter1">
+            <h2>Chapter 1: Introduction</h2>
+            <p>THIS book is designed to help you make effective use of the Java programming
+                language and its fundamental libraries: java.lang, java.util, and java.io, and
+                subpackages such as java.util.concurrent and java.util.function. Other
+                libraries are discussed from time to time.
+                This book consists of ninety items, each of which conveys one rule. The rules
+                capture practices generally held to be beneficial by the best and most experienced
+                programmers. The items are loosely grouped into eleven chapters, each covering
+                one broad aspect of software design. The book is not intended to be read from
+                cover to cover: each item stands on its own, more or less. The items are heavily
+                cross-referenced so you can easily plot your own course through the book.</p>
+            <img src="images/java_intro.jpg" alt="Java Introduction" width="600">
+            <figcaption>Introduction to Java Programming</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter2">
+            <h2>Chapter 2: Creating and Destroying Objects</h2>
+            <p>THIS chapter concerns creating and destroying objects: when and how to create
+                them, when and how to avoid creating them, how to ensure they are destroyed in a
+                timely manner, and how to manage any cleanup actions that must precede their
+                destruction</p>
+            <img src="images/java_objects.jpg" alt="Creating and Destroying Objects" width="600">
+            <figcaption>Managing Java Objects</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter3">
+            <h2>Chapter 3: Methods Common to All Objects</h2>
+            <p>ALTHOUGH Object is a concrete class, it is designed primarily for extension.
+                All of its nonfinal methods (equals, hashCode, toString, clone, and finalize)
+                have explicit general contracts because they are designed to be overridden. It is
+                the responsibility of any class overriding these methods to obey their general con-
+                tracts; failure to do so will prevent other classes that depend on the contracts (such
+                as HashMap and HashSet) from functioning properly in conjunction with the class.
+                This chapter tells you when and how to override the nonfinal Object methods.
+                The finalize method is omitted from this chapter because it was discussed in
+                Item 8. While not an Object method, Comparable.compareTo is discussed in this
+                chapter because it has a similar character.</p>
+            <img src="images/java_methods.jpg" alt="Common Methods" width="600">
+            <figcaption>Java Common Methods</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter4">
+            <h2>Chapter 4: Classes and Interfaces</h2>
+            <p>CLASSES and interfaces lie at the heart of the Java programming language.
+                They are its basic units of abstraction. The language provides many powerful
+                elements that you can use to design classes and interfaces. This chapter contains
+                guidelines to help you make the best use of these elements so that your classes and
+                interfaces are usable, robust, and flexible.</p>
+            <img src="images/java_classes.jpg" alt="Classes and Interfaces" width="600">
+            <figcaption>Designing Java Classes and Interfaces</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter5">
+            <h2>Chapter 5: Generics</h2>
+            <p>SINCE Java 5, generics have been a part of the language. Before generics, you had
+                to cast every object you read from a collection. If someone accidentally inserted an
+                object of the wrong type, casts could fail at runtime. With generics, you tell the
+                compiler what types of objects are permitted in each collection. The compiler
+                inserts casts for you automatically and tells you at compile time if you try to insert
+                an object of the wrong type. This results in programs that are both safer and clearer,
+                but these benefits, which are not limited to collections, come at a price. This chap-
+                ter tells you how to maximize the benefits and minimize the complications.</p>
+            <img src="images/java_generics.jpg" alt="Generics" width="600">
+            <figcaption>Java Generics</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter6">
+            <h2>Chapter 6: Enums and Annotations</h2>
+            <p>JAVA supports two special-purpose families of reference types: a kind of class
+                called an enum type, and a kind of interface called an annotation type. This chap-
+                ter discusses best practices for using these type families.</p>
+            <img src="images/java_enums.jpg" alt="Enums and Annotations" width="600">
+            <figcaption>Enums and Annotations in Java</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter7">
+            <h2>Chapter 7: Lambdas and Streams</h2>
+            <p>In Java 8, functional interfaces, lambdas, and method references were added to
+                make it easier to create function objects. The streams API was added in tandem
+                with these language changes to provide library support for processing sequences of
+                data elements. In this chapter, we discuss how to make best use of these facilities</p>
+            <img src="images/java_methods2.jpg" alt="Methods in Java" width="600">
+            <figcaption>Best Practices for Java Methods</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter8">
+            <h2>Chapter 8: General Programming</h2>
+            <p>THIS chapter is devoted to the nuts and bolts of the language. It discusses local
+                variables, control structures, libraries, data types, and two extralinguistic facilities:
+                reflection and native methods. Finally, it discusses optimization and naming
+                conventions.</p>
+            <img src="images/java_programming.jpg" alt="General Programming Techniques" width="600">
+            <figcaption>General Java Programming Techniques</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter9">
+            <h2>Chapter 9: Exceptions</h2>
+            <p>WHEN used to best advantage, exceptions can improve a program's readability,
+                reliability, and maintainability. When used improperly, they can have the opposite
+                effect. This chapter provides guidelines for using exceptions effectively.</p>
+            <img src="images/java_exceptions.jpg" alt="Exception Handling" width="600">
+            <figcaption>Exception Handling in Java</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter10">
+            <h2>Chapter 10: Concurrency</h2>
+            <p>THREADS allow multiple activities to proceed concurrently. Concurrent pro-
+                gramming is harder than single-threaded programming, because more things can go
+                wrong, and failures can be hard to reproduce. You can't avoid concurrency. It is
+                inherent in the platform and a requirement if you are to obtain good performance
+                from multicore processors, which are now ubiquitous. This chapter contains advice
+                to help you write clear, correct, well-documented concurrent programs.</p>
+            <img src="images/java_concurrency.jpg" alt="Concurrency in Java" width="600">
+            <figcaption>Concurrency and Multithreading in Java</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+
+        <section id="chapter11">
+            <h2>Chapter 11: Serialization</h2>
+            <p>THIS chapter concerns object serialization, which is Java’s framework for
+                encoding objects as byte streams (serializing) and reconstructing objects from
+                their encodings (deserializing). Once an object has been serialized, its encoding
+                can be sent from one VM to another or stored on disk for later deserialization. This
+                chapter focuses on the dangers of serialization and how to minimize them.</p>
+            <img src="images/java_serialization.jpg" alt="Serialization in Java" width="600">
+            <figcaption>Serialization Concepts in Java</figcaption>
+            <p><a href="#toc">Back to Table of Contents</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Educational Platform. All rights reserved.</p>
+        <h4>Contact Us</h4>
+        <p>Email: dimitrislouridas22@gmail.com</p>
+        <p>Phone: +1 (234) 567-890</p>
+        <h4>Follow Us</h4>
+        <ul class="social-media">
+            <li><a href="https://www.facebook.com/educationalplatform" target="_blank"><img src="images/facebook.png" alt="Facebook" width="30"> Facebook</a></li>
+            <li><a href="https://www.twitter.com/educationalplatform" target="_blank"><img src="images/twitter.png" alt="Twitter" width="30"> Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/educationalplatform" target="_blank"><img src="images/linkdin.png" alt="LinkedIn" width="30"> LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/educationalplatform" target="_blank"><img src="images/instagram.jpg" alt="Instagram" width="30"> Instagram</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,606 @@
+/* ======================= */
+/* Βασικές Ρυθμίσεις Σώματος */
+/* ======================= */
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ======================= */
+/* Header (Κεντραρισμένος Τίτλος, Σταθερό Logo) */
+/* ======================= */
+header {
+    grid-area: header;
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 80px;
+    gap: 20px;
+}
+header .logo {
+    position: absolute; /* Σταθερή τοποθέτηση για το λογότυπο */
+    left: 20px; /* Απόσταση από την αριστερή άκρη */
+    top: 5%; /* Τοποθέτηση στο κέντρο κάθετα */
+    transform: translateY(-50%); /* Κεντράρισμα του λογότυπου */
+    
+}
+
+header .logo img {
+    width: 100px; /* Καθορισμένο πλάτος για το λογότυπο */
+    height: auto; /* Διατήρηση αναλογιών */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center; /* Κεντράρισμα του τίτλου */
+    z-index: 1; /* Εξασφαλίζει ότι ο τίτλος είναι ορατός πάνω από το λογότυπο */
+}
+
+nav ul li a:hover {
+    color:  #ffffff;
+    text-decoration: underline;
+
+
+}
+/* ======================= */
+/* Default Logo Visibility */
+/* ======================= */
+.desktop-logo {
+    display: block; /* Show desktop logo by default */
+}
+
+.mobile-logo {
+    display: none; /* Hide mobile logo by default */
+}
+
+/* ======================= */
+/* Sidebar (Aside) */
+/* ======================= */
+aside {
+    grid-area: aside;
+    background: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ======================= */
+/* Main Content */
+/* ======================= */
+main {
+    grid-area: main;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* ======================= */
+/* Go Back Button (Δεξιά τοποθέτηση) */
+/* ======================= */
+.go-back {
+    position: absolute; /* Απόλυτη τοποθέτηση */
+    right: 20px; /* Απόσταση από τη δεξιά άκρη */
+    top: 10px; /* Απόσταση από την κορυφή του main */
+    font-weight: bold;
+    color: #35424a;
+    text-decoration: none;
+}
+
+.go-back:hover {
+    text-decoration: underline;
+}
+
+main h2 {
+    color: #35424a;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* ======================= */
+/* Εικόνες */
+/* ======================= */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Ροή εικόνων */
+.team-member img {
+    float: left;
+    margin-right: 10px;
+}
+
+/* ======================= */
+/* Κείμενο και συνδέσεις */
+/* ======================= */
+p {
+    margin: 10px 0;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555;
+}
+
+a:visited {
+    color: #6c757d;
+}
+
+a:active {
+    color: #000;
+}
+
+/* ======================= */
+/* Χωρισμένα Πλαίσια για Βιβλία και Διαλέξεις */
+/* ======================= */
+.book, .lecture {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0; /* Απόσταση μεταξύ των στοιχείων */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.book img, .lecture img {
+    width: 100px; /* Καθορισμένο πλάτος εικόνας */
+    height: auto;
+    margin-right: 15px;
+}
+
+/* ======================= */
+/* Ψευδοκλάσεις για links */
+/* ======================= */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======================= */
+/* Footer */
+/* ======================= */
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style-position: inside; /* Φέρνει το κείμενο κοντά στα bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    margin: 5px 0; /* Ελέγχει την κάθετη απόσταση μεταξύ των στοιχείων */
+}
+
+/* ======================= */
+/* Social Media */
+/* ======================= */
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 10px; /* Add spacing between icons */
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f0c040;
+    transform: scale(1.1);
+}
+
+.social-media a img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+
+
+/* ======================= */
+/* Media Queries */
+/* ======================= */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    }
+
+    aside {
+        display: none; /* Απόκρυψη του sidebar */
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        display: none; /* Κρύβει το navigation bar στο desktop */
+    }
+}
+
+/* ======================= */
+/* responsive design */
+/* ======================= */
+
+/* Adjust font sizes */
+body {
+    font-size: 16px;
+}
+
+.desktop-logo {
+    display: block; /* Default to visible */
+}
+
+.mobile-logo {
+    display: none; /* Default to hidden */
+}
+
+
+
+
+/* Phones (Single Column) */
+@media (max-width: 768px) {
+        body {
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr auto;
+        }
+
+        header {
+            position: relative; /* Allows flexible positioning */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center-align logo and title horizontally */
+            height: auto; /* Adjust height dynamically */
+            padding: 20px;
+            gap: 10px; /* Space between the logo and the title */
+        }
+    
+        header .logo {
+            position: static; /* Logo stays in the flow of content */
+            margin: 0 auto; /* Center the logo */
+            
+        }
+    
+        header .logo img {
+            max-width: 100px; /* Larger logo for tablets */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid transparent; /* Transparent border */
+            background-color: #35424a; /* Match the header background color */
+            border-radius: 50%; /* Make it circular */
+        }
+    
+        header h1 {
+            font-size: 1.2rem; /* Smaller title font size */
+            text-align: center; /* Center-align the title */
+            margin: 0; /* Remove extra margins */
+            line-height: 1.4; /* Adjust line height for better readability */
+        }
+        
+    
+        /* Hide desktop logo and show mobile logo */
+        .desktop-logo {
+            display: none; /* Hide desktop logo */
+        }
+    
+        .mobile-logo {
+            display: block; /* Show mobile logo */
+        }
+    
+        /* Adjust navigation for smaller screens */
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    
+        nav ul li {
+            margin: 0 5px;
+        }
+    
+        nav ul li a {
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+    }
+
+
+
+/* Tablet (Two Columns) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+        position: relative; /* Allows flexible positioning */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center-align logo and title horizontally */
+        height: auto; /* Adjust height dynamically */
+        padding: 20px;
+        gap: 10px; /* Space between the logo and the title */
+    }
+
+    header .logo {
+        position: static; /* Logo stays in the flow of content */
+        margin: 0 auto; /* Center the logo */
+        
+    }
+
+    header .logo img {
+        max-width: 100px; /* Larger logo for tablets */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid transparent; /* Transparent border */
+        background-color: #35424a; /* Match the header background color */
+        border-radius: 50%; /* Make it circular */
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Smaller title font size */
+        text-align: center; /* Center-align the title */
+        margin: 0; /* Remove extra margins */
+        line-height: 1.4; /* Adjust line height for better readability */
+    }
+    
+
+    /* Hide desktop logo and show mobile logo */
+    .desktop-logo {
+        display: none; /* Hide desktop logo */
+    }
+
+    .mobile-logo {
+        display: block; /* Show mobile logo */
+    }
+
+    aside {
+        display: none; /* Hide sidebar for tablets/desktops */
+    main {
+        margin: 15px;
+    }
+}
+
+
+/* Desktop (Three Columns) */
+
+@media (min-width: 1024px) {
+    @media (min-width: 1024px) {
+        body {
+            grid-template-areas:
+                "header header header"
+                "aside main main"
+                "footer footer footer";
+            grid-template-columns: 1fr 3fr 3fr;
+            grid-template-rows: auto 1fr auto;
+        }
+    
+        aside {
+            display: none; /* Hide sidebar for tablets/desktops */
+        }
+    
+        main {
+            margin: 10px;
+        }
+    }
+}
+
+/* Responsive Images */
+
+img {
+        max-width: 100%; /* Scale images to fit within the parent container */
+        height: auto; /* Maintain the aspect ratio */
+        display: block; /* Prevent inline spacing issues */
+        margin: 0 auto; /* Center images horizontally if needed */
+    }
+
+
+picture img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+}
+
+/* ======================= */
+/* Γενικές Ρυθμίσεις Φόρμας */
+/* ======================= */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ======================= */
+/* Στοιχεία Φόρμας */
+/* ======================= */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"], button {
+    background-color: #35424a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2c3e50;
+}
+
+/* ======================= */
+/* Σφάλματα Επικύρωσης */
+/* ======================= */
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+/* ======================= */
+/* Responsive Design */
+/* ======================= */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+
+
+
+
+

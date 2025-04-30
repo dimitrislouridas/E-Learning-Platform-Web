@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Registration Form for Educational Platform">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form | Educational Platform</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Platform Logo" width="150">
+        </div>
+        <h1>User Registration Form | Educational CS Platform</h1>
+    </header>
+
+    <!-- Navigation bar -->
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="form.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Προσθήκη του Aside -->
+    <aside>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <form id="registration-form" action="submit-form.php" method="POST">
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required autocomplete="address-line1">
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="tel">
+            </fieldset>
+
+            <!-- User Identification -->
+            <fieldset>
+                <legend>User Identification</legend>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="new-password">
+                
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
+            </fieldset>
+
+            <!-- Communication Preferences -->
+            <fieldset>
+                <legend>Communication Preferences</legend>
+                
+                <label for="communication">Preferred Communication Method:</label>
+                <select id="communication" name="communication">
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="viber">Viber</option>
+                </select>
+            </fieldset>
+
+            <!-- Questionnaire -->
+            <fieldset>
+                <legend>Questionnaire</legend>
+                
+                <label for="education">What is your highest level of education?</label>
+                <input type="text" id="education" name="education" required>
+                
+                <label for="profession">What is your current profession?</label>
+                <input type="text" id="profession" name="profession" required>
+                
+                <label for="goals">What are your learning goals?</label>
+                <textarea id="goals" name="goals" rows="4" required></textarea>
+                
+                <label for="skills">What skills do you want to improve?</label>
+                <input type="text" id="skills" name="skills" required>
+                
+                <label for="learning-method">Preferred learning method:</label>
+                <input type="text" id="learning-method" name="learning-method" required>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Educational Platform. All rights reserved.</p>
+        <h4>Contact Us</h4>
+        <p>Email: dimitrislouridas22@gmail.com</p>
+        <p>Phone: +1 (234) 567-890</p>
+        <h4>Follow Us</h4>
+        <ul class="social-media">
+            <li><a href="https://www.facebook.com/educationalplatform" target="_blank"><img src="images/facebook.png" alt="Facebook" width="30"> Facebook</a></li>
+            <li><a href="https://www.twitter.com/educationalplatform" target="_blank"><img src="images/twitter.png" alt="Twitter" width="30"> Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/educationalplatform" target="_blank"><img src="images/linkdin.png" alt="LinkedIn" width="30"> LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/educationalplatform" target="_blank"><img src="images/instagram.jpg" alt="Instagram" width="30"> Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script src="form-validation.js"></script>
+</body>
+</html>
